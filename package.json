@@ -1,0 +1,23 @@
+{
+  "name": "vkit-nodejs",
+  "version": "1.0.0",
+  "description": "Video.io SDK for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Video-io/vkit-nodejs.git"
+  },
+  "keywords": [
+    "video",
+    "sdk"
+  ],
+  "author": "Hugh Chen",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/Video-io/vkit-nodejs/issues"
+  },
+  "homepage": "https://github.com/Video-io/vkit-nodejs#readme"
+}
