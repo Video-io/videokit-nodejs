@@ -38,9 +38,9 @@ VKitClient.prototype._makeFetch = async function (opt) {
         Accept: 'application/json',
         'Accept-Charset': 'utf-8',
         redirect: 'follow',
-        referrerPolicy: 'no-referrer',
-        body: body ? body : undefined
-      }
+        referrerPolicy: 'no-referrer'
+      },
+      body: body ? JSON.stringify(body) : undefined
     })
 
     const data = await res.json()
