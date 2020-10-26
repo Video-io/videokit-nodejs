@@ -3,13 +3,13 @@
 Install
 -------
 
-    npm install @video-io/vkit-nodejs
+    npm install @video-io/videokit-nodejs
 
 Usage
 -----
 
 ```javascript
-const { VKitClient } = require('@video-io/vkit-nodejs')
+const { VKitClient } = require('@video-io/videokit-nodejs')
 
 var vkit = new VKitClient({
   appSecret: 'YOUR_APP_TOKEN'

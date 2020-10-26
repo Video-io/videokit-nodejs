@@ -1,3 +1,5 @@
+'use strict'
+
 const fetch = require('node-fetch')
 
 function VKitClient (opt) {
@@ -16,7 +18,7 @@ VKitClient.prototype.getSessionToken = async function (identity) {
   })
 
   if (err) {
-    throw new Error('VkitClient error: ' + err)
+    throw new Error('videokit client error: ' + err)
   }
 
   return {
@@ -50,7 +52,9 @@ VKitClient.prototype._makeFetch = async function (opt) {
     }
 
     return { data, err: null }
-  } catch (err) {}
+  } catch (err) {
+    return { err }
+  }
 }
 
 module.exports = {
