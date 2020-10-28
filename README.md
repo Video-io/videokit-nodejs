@@ -11,7 +11,7 @@ Usage
 ```javascript
 const { VKitClient } = require('@video-io/videokit-nodejs')
 
-var vkit = new VKitClient({
+const vkit = new VKitClient({
   appSecret: 'YOUR_APP_TOKEN'
 })
 
