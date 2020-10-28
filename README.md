@@ -1,3 +1,9 @@
+![](https://github.com/Video-io/videokit-nodejs/workflows/Node.js%20CI/badge.svg?branch=main)
+![](https://github.com/Video-io/videokit-nodejs/workflows/Node.js%20Package/badge.svg)
+[![Known Vulnerabilities](https://snyk.io/test/github/Video-io/videokit-nodejs/badge.svg)](https://snyk.io/test/github/Video-io/videokit-nodejs)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
+
+
 # Video.io SDK for Node.js
 
 Install
