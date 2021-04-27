@@ -6,14 +6,38 @@ function VKitClient (opt) {
   this._appSecret = opt.appSecret
 }
 
-VKitClient.prototype.getSessionToken = async function (identity) {
+/**
+ * identity = unique identifier for your user.
+ * scopes = array of security scopes to be enabled for this session. Example: [
+   'videos.admin.read',
+   'videos.read',
+   'videos.edit',
+   'videos.delete',
+   'videos.create',
+   'streams.admin.read',
+   'streams.read',
+   'streams.create',
+   'streams.delete',
+ ]
+ * See https://docs.video.io/javascript/core-session for more information.
+ *
+ * @param identity
+ * @param scopes
+ * @returns {Promise<{identity: (*|string), sessionToken: string, scopes: *, expiresAt: string}>}
+ */
+VKitClient.prototype.getSessionToken = async function (identity, scopes) {
   if (!identity) return
+
+  if (!scopes) {
+    scopes = []
+  }
 
   const { data, err } = await this._makeFetch({
     path: '/v1/sessions',
     method: 'POST',
     body: {
-      identity
+      identity,
+      scopes
     }
   })
 
@@ -24,7 +48,8 @@ VKitClient.prototype.getSessionToken = async function (identity) {
   return {
     sessionToken: data.sessionToken,
     expiresAt: data.expiresAt,
-    identity: data.identity
+    identity: data.identity,
+    scopes: scopes,
   }
 }
 
