@@ -25,7 +25,7 @@ function VKitClient (opt) {
  * @param scopes
  * @returns {Promise<{identity: (*|string), sessionToken: string, scopes: *, expiresAt: string}>}
  */
-VKitClient.prototype.getSessionToken = async function (identity, scopes) {
+VKitClient.prototype.getSessionToken = async function (identity, scopes = []) {
   if (!identity) return
 
   if (!scopes) {
